@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  parserOptions: { 
+  parserOptions: {
     parser: 'babel-eslint',
     sourceType: 'module'
   },
@@ -24,13 +24,21 @@ module.exports = {
     'quotes': ['error', 'single'],
     'no-unused-vars': 'warn',
     'no-param-reassign': 'off',
-    'indent': ['error', 2, { 'VariableDeclarator': 2, 'ArrayExpression': 1 }],
+    'indent': ['error', 2, {
+      'VariableDeclarator': 2,
+      'ArrayExpression': 1
+    }],
     'no-empty': 'off',
-    'brace-style': ['error', 'stroustrup', { 'allowSingleLine': true }],
+    'brace-style': ['error', 'stroustrup', {
+      'allowSingleLine': true
+    }],
     'array-bracket-spacing': ['error', 'never'],
     'block-spacing': ['error', 'always'],
     'camelcase': 'off',
-    'comma-spacing': ['error', { before: false, after: true }],
+    'comma-spacing': ['error', {
+      before: false,
+      after: true
+    }],
     'comma-style': ['error', 'last'],
     'comma-dangle': ['error', 'always-multiline'],
     'no-console': 'warn',
@@ -38,8 +46,15 @@ module.exports = {
     'no-debugger': 'error',
     'no-cond-assign': ['error', 'always'],
     'func-call-spacing': ['off', 'never'],
-    'key-spacing': ['error', { beforeColon: false, afterColon: true }],
-    'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
+    'key-spacing': ['error', {
+      beforeColon: false,
+      afterColon: true
+    }],
+    'indent': ['error', 2, {
+      SwitchCase: 1,
+      VariableDeclarator: 1,
+      outerIIFEBody: 1
+    }],
     'lines-around-comment': 'off',
     'no-mixed-spaces-and-tabs': 'error',
     'no-mixed-operators': ['error', {
@@ -64,7 +79,10 @@ module.exports = {
     'no-return-await': 'off',
 
     // es6
-    'arrow-spacing': ['error', { before: true, after: true }],
+    'arrow-spacing': ['error', {
+      before: true,
+      after: true
+    }],
     'no-var': 'error',
     'prefer-const': ['error', {
       destructuring: 'any',
@@ -96,6 +114,10 @@ module.exports = {
     'no-with': 'error',
     'no-void': 'error',
     'no-useless-escape': 'error',
+    'no-trailing-spaces': 'error',
     'vars-on-top': 'error',
+    'space-before-function-paren': ['error', 'never'],
+    'space-before-blocks': ['error', 'always'],
+    'space-in-parens': ['error', 'never'],
   }
 }

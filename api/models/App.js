@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const schema = new mongoose.Schema({ 
+const schema = new mongoose.Schema({
   name: {
     type: String,
     index: true,
@@ -24,7 +24,7 @@ const schema = new mongoose.Schema({
   stages: [String],
   debug: Object,
   assets: Object,
-  
+
   __v: { type: Number, select: false },
 })
 

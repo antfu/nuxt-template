@@ -46,7 +46,7 @@ process.on('SIGINT', () => {
   })
 })
 
-export function isConnected () {
+export function isConnected() {
   return connected
 }
 

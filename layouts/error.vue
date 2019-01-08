@@ -10,21 +10,21 @@ import HttpStatus from 'http-status'
 
 export default {
   props: ['error'],
-  head () {
+  head() {
     return {
       title: this.error.statusCode,
     }
   },
-  mounted () {
-    if (this.error.statusCode === 401) { 
+  mounted() {
+    if (this.error.statusCode === 401) {
       this.$router.push({
-        name: 'index', 
-        query: { redirect: this.$route.path }, 
-      }) 
+        name: 'index',
+        query: { redirect: this.$route.path },
+      })
     }
   },
   computed: {
-    status () {
+    status() {
       return HttpStatus[this.error.statusCode]
     },
   },

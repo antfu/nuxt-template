@@ -26,7 +26,7 @@ export default {
   ** Add axios globally
   */
   build: {
-    extend (config, ctx) {
+    extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',

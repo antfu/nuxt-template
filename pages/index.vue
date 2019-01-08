@@ -1,5 +1,5 @@
 <template lang="pug">
-v-btn.primary 
+v-btn.primary
   span {{ msg }}
 </template>
 

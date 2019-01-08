@@ -10,20 +10,20 @@ if (!shell.which('git')) {
   shell.exit(1)
 }
 
-async function updatePackageJson (version) {
+async function updatePackageJson(version) {
   let content = (await fs.promises.readFile('./package.json')).toString()
   content = content.replace(/"version": ".*"/, `"version": "${version}"`)
   await fs.promises.writeFile('./package.json', content)
 }
 
-function exec (command) {
+function exec(command) {
   if (shell.exec(command).code !== 0) {
     shell.exit(1)
     process.exit(1)
   }
 }
 
-(async () => {
+(async() => {
   const current_version = (await fs.promises.readFile('./cli/_version')).toString().trim()
   const version_split = current_version.split('.')
   version_split[version_split.length - 1]++
@@ -71,7 +71,7 @@ function exec (command) {
   await fs.promises.writeFile('./cli/_version', version)
   await fs.promises.writeFile('./meta/release_date.js', `export default '${dayjs().format('YYYY-MM-DD HH:mm')}'\n`)
   await updatePackageJson(version)
-  
+
   exec('npm i')
 
   if (result.git) {
